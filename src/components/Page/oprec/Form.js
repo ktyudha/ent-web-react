@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import axiosInstance from "../../utils/axiosInstance";
+import axiosInstance from "../../../utils/axiosInstance";
 
-import FormLayout from "../../layouts/FormLayout";
-import backgroundImage from "../../asset/pattern3.png";
+import FormLayout from "../../../layouts/FormLayout";
+import backgroundImage from "../../../asset/pattern3.png";
 
 const ResponsiveFormWithNavbar = () => {
   const requiredFields = [
