@@ -3,6 +3,7 @@ import Form from "./components/Page/oprec/Form.js";
 import Axiostesting from "./components/Page/testAxios.js";
 import LandingPage from "./components/Page/LandingPage";
 import RequirementPage from "./components/Page/oprec/RequirementPage.js";
+import SearchParticipant from "./components/Page/oprec/SearchParticipant";
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/requirement" element={<RequirementPage />} />
         <Route path="/oprec" element={<Form />} />
+        <Route path="/requirement" element={<Form />} />
+        <Route path="/participant" element={<SearchParticipant />} />
         <Route path="/axios" element={<Axiostesting />} />
       </Routes>
     </BrowserRouter>

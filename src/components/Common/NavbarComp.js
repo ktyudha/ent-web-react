@@ -48,7 +48,10 @@ class Navbar extends Component {
                 </a>
               </li>
               <li className="py-1">
-                <a href="#" className="block py-2 px-4 text-sky-900 font-bold">
+                <a
+                  href="#contact"
+                  className="block py-2 px-4 text-sky-900 font-bold"
+                >
                   Contact
                 </a>
               </li>
@@ -105,7 +108,7 @@ class Navbar extends Component {
               </li>
               <li className="bg-sky-900 rounded mb-1">
                 <a
-                  href="#"
+                  href="#contact"
                   className="block py-2 px-4 text-white font-bold text-center hover:bg-teal-500"
                 >
                   Contact
