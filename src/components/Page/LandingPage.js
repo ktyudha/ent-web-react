@@ -324,10 +324,10 @@ const LandingPage = () => {
   };
 
   return (
-    <div>
+    <div className="bg-hero">
       <FormLayout>
-        <section className="bg-hero text-center flex flex-col py-10 px-12  md:pt-20 relative">
-          <p className="text-3xl md:text-6xl lg:text-7xl lg:px-20 font-GothamBlack font-extrabold font-p text-white mb-4 pt-20">
+        <section className="bg-hero text-center flex flex-col py-10 xl:pb-0 px-12  md:pt-20 relative">
+          <p className="text-3xl md:text-6xl lg:text-7xl lg:px-20 xl:px-0 font-GothamBlack font-extrabold font-p text-white mb-4 pt-20">
             EEPIS NEWS AND NETWORK TEAM
           </p>
           <p className="text-sm px-16 md:px-40 font-p2 font-GothamBlack md:text-xl lg:text-2xl  lg:px-72 text-white mb-4">
@@ -336,13 +336,13 @@ const LandingPage = () => {
           <div className="flex items-center flex-col justify-center md:pt-10 lg:pb-20">
             <Link
               to={"/registration"}
-              className="bg-teal-500 w-2/5 md:w-2/6  text-white font-bold py-2 px-4  rounded-full mt-4 md:text-xl hover:bg-gray-300 hover:text-white transition duration-300"
+              className="bg-teal-500 w-2/5 md:w-2/6  text-white font-bold py-2 px-4  rounded-full mt-4 md:text-xl xl:w-1/6 hover:bg-gray-300 hover:text-white transition duration-300"
             >
               <button>Join Us</button>
             </Link>
             <Link
               to={"/requirement"}
-              className="bg-yellow-500 w-2/5 md:w-2/6  text-white font-bold py-2 px-4 rounded-full mt-4 md:text-xl hover:bg-gray-300 hover:text-white transition duration-300"
+              className="bg-yellow-500 w-2/5 md:w-2/6  text-white font-bold py-2 px-4 rounded-full mt-4 md:text-xl xl:w-1/6 hover:bg-gray-300 hover:text-white transition duration-300"
             >
               <button>Requirement</button>
             </Link>
@@ -350,7 +350,7 @@ const LandingPage = () => {
           
         </section>
 
-        <section className="bg-white text-center">
+        <section className="bg-hero text-center">
           <img src={process.env.PUBLIC_URL + "/hero.svg"} className="w-full" alt="Hero" />
         </section>
 
@@ -407,11 +407,11 @@ const LandingPage = () => {
                 IconData[selectedIcon]?.icon2
               ) ? (
                 <>
-                  <div className="w-2/5">
+                  <div className="w-2/5 ">
                     <img
                       src={IconData[selectedIcon]?.icon2 || ""}
                       alt={IconData[selectedIcon]?.label || ""}
-                      className="w-full h-w-full"
+                      className="w-full h-w-full md:w-4/5 md:h-w-4/5 flex justify-center"
                     />
                   </div>
                   <div className="w-3/5 mt-7 text-left pl-4">
@@ -437,7 +437,7 @@ const LandingPage = () => {
                     <img
                       src={IconData[selectedIcon]?.icon2 || ""}
                       alt={IconData[selectedIcon]?.label || ""}
-                      className="w-full h-w-full"
+                      className="w-full h-w-full md:w-4/5 md:h-w-4/5 flex justify-center"
                     />
                   </div>
                 </>
