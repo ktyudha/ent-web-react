@@ -2,6 +2,45 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 1.6rem;
+}
+
+.text-name{
+  font-size: 12px;
+  line-height: 10px;
+}
+
+.text-prodi{
+  font-size: 10px;
+  line-height: 10px;
+}
+
+.bg-hero{
+  background-color: #134679;
+
+}
+
+.font-p{
+  line-height: 2rem;
+}
+
+.font-p2{
+  line-height: 1.2rem;
+}
+
+.pt-100{
+  padding-top: 1000px;
+}
+
+.h-96{
+  height: 24rem;
+}
+.h-100{
+  height: 30rem;
+}
+
 /* .App {
   text-align: center;
 }
