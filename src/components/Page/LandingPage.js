@@ -14,7 +14,7 @@ const LandingPage = () => {
       Gen14: [
         {
           nama: "Rafli Herdiansyah",
-          prodi: "D4 Teknik Elektronika",
+          prodi: "D4 Electrical Engineering",
           foto: "/Member/RP_RAFLI.jpg",
         },
       ],
@@ -36,19 +36,19 @@ const LandingPage = () => {
         },
         {
           nama: "A. A. Inten Pramitriyani",
-          prodi: "D4 Teknologi Game",
+          prodi: "D4 Game Technology",
           foto: "/Member/RP_INTEN.jpg",
         },
       ],
       Gen16: [
         {
           nama: "Rifda Qurrotul'Ain",
-          prodi: "D4 Sains Data Terapan",
+          prodi: "D4 Applied Data Science",
           foto: "/Member/RP_RIFDA.jpg",
         },
         {
           nama: "Suci Rindya K.",
-          prodi: "D4 Sistem Pembangkit Energi",
+          prodi: "D4 Energy Generation System",
           foto: "/Member/RP_SUCI.jpg",
         },
       ],
@@ -60,17 +60,17 @@ const LandingPage = () => {
         },
         {
           nama: "Erina Nur M. J.",
-          prodi: "D3 Multimedia Broadcasting",
+          prodi: "D4 Applied Data Science",
           foto: "/Member/RP_ERINA.jpg",
         },
         {
           nama: "Harun Budiseto",
-          prodi: "D4 Teknologi Rekayasa Multimedia",
+          prodi: "D4 Multimedia Engineering Technology",
           foto: "/Member/RP_HARUN.jpg",
         },
         {
           nama: "Maya Listyani",
-          prodi: "D4 Teknologi Rekayasa Multimedia",
+          prodi: "D4 Multimedia Engineering Technology",
           foto: "/Member/RP_MAYA.jpg",
         },
       ],
@@ -85,12 +85,12 @@ const LandingPage = () => {
       Gen15: [
         {
           nama: "Bunga Adinda",
-          prodi: "D4 Teknologi Game",
+          prodi: "D4 Game Technology",
           foto: "/Member/FG_BUNGA.jpg",
         },
         {
           nama: "M. Izzudin Fasya",
-          prodi: "D3 Teknik Informatika",
+          prodi: "D3 Informatics Engineering",
           foto: "/Member/FG_FASYA.jpg",
         },
         {
@@ -102,17 +102,17 @@ const LandingPage = () => {
       Gen16: [
         {
           nama: "Karina Sovia S.",
-          prodi: "D3 Telekomunikasi",
+          prodi: "D3 Telecommunications Engineering",
           foto: "/Member/FG_KARINA.jpg",
         },
         {
           nama: "Lily Ananta S.",
-          prodi: "D4 Telekomunikasi",
+          prodi: "D4 Telecommunications Engineering",
           foto: "/Member/FG_LILY.jpg",
         },
         {
           nama: "Johan Muhammad I.",
-          prodi: "D3 Elektro Industri",
+          prodi: "D3 Industrial Electrical Engineering",
           foto: "/Member/FG_JOHAN.jpg",
         },
         {
@@ -129,12 +129,12 @@ const LandingPage = () => {
         },
         {
           nama: "Ikhsan Nur A.",
-          prodi: "D4 Teknologi Rekayasa Multimedia",
+          prodi: "D4 Multimedia Engineering Technology",
           foto: "/Member/FG_IKHSAN.jpg",
         },
         {
           nama: "Muhammad Soleh.",
-          prodi: "D4 Teknoogi Rekayasa Multimedia",
+          prodi: "D4 Multimedia Engineering Technology",
           foto: "/Member/FG_SOLEH.jpg",
         },
       ],
@@ -155,7 +155,7 @@ const LandingPage = () => {
       Gen15: [
         {
           nama: "Fariz Bagaskoro M.",
-          prodi: "D4 Teknik Telekomunikasi",
+          prodi: "D4 Teknik Telecommunications Engineering",
           foto: "/Member/VG_FARIZ.jpg",
         },
       ],
@@ -174,22 +174,22 @@ const LandingPage = () => {
       Gen17: [
         {
           nama: "Alvira Nilam A. P.",
-          prodi: "D4 Sistem Pembangkit Energi",
+          prodi: "D4 Energy Generation System",
           foto: "/Member/VG_ALVIRA.jpg",
         },
         {
           nama: "Elham Cahya R.",
-          prodi: "D3 Telekomunikasi",
+          prodi: "D3 Telecommunications Engineering",
           foto: "/Member/VG_ELHAM.jpg",
         },
         {
           nama: "Fuad Zaki N.",
-          prodi: "D4 Teknologi Rekayasa Multimedia",
+          prodi: "D4 Multimedia Engineering Technology",
           foto: "/Member/VG_FUAD.jpg",
         },
         {
           nama: "Gerardus M. Angger",
-          prodi: "D4 Teknologi Rekayasa Internet",
+          prodi: "D4 Internet Engineering Technology",
           foto: "/Member/VG_ANGGER.jpg",
         },
       ],
@@ -208,12 +208,12 @@ const LandingPage = () => {
         },
         {
           nama: "Ryan Lazuardy",
-          prodi: "D4 Teknologi Game",
+          prodi: "D4 Game Technology",
           foto: "/Member/DG_RYAN.jpg",
         },
         {
           nama: "M. A. Ekky Ardhana",
-          prodi: "D3 Telekomunikasi",
+          prodi: "D3 Telecommunications Engineering",
           foto: "/Member/DG_EKKY.jpg",
         },
       ],
@@ -230,19 +230,19 @@ const LandingPage = () => {
         },
         {
           nama: "Satrio Yoga P.",
-          prodi: "D3 Teknik Informatika",
+          prodi: "D3 Informatics Engineering",
           foto: "/Member/DG_YOGA.jpg",
         },
       ],
       Gen17: [
         {
           nama: "Afsun Filosof.",
-          prodi: "D3 Telekomunikasi ",
+          prodi: "D3 Telecommunications Engineering ",
           foto: "/Member/DG_AFSUN.jpg",
         },
         {
           nama: "Shabrina Putri R.",
-          prodi: "D4 Teknologi Rekayasa Multimedia",
+          prodi: "D4 Multimedia Engineering Technology",
           foto: "/Member/DG_SHABRINA.jpg",
         },
       ],
@@ -261,19 +261,19 @@ const LandingPage = () => {
         },
         {
           nama: "M. N. Hidayatul Khoiron",
-          prodi: "D3 Teknik Informatika",
+          prodi: "D3 Informatics Engineering",
           foto: "/Member/WM_KHOIRON.jpg",
         },
         {
           nama: "Santi",
-          prodi: "D4 Teknik Informatika",
+          prodi: "D4 Informatics Engineering",
           foto: "/Member/WM_SANTI.jpg",
         },
       ],
       Gen16: [
         {
           nama: "M. Althaf Firdaus",
-          prodi: "D4 Sistem Pembangkit Energi",
+          prodi: "D4 Energy Generation System",
           foto: "/Member/WM_ALTHAF.jpg",
         },
         {
@@ -283,29 +283,29 @@ const LandingPage = () => {
         },
         {
           nama: "A. M. Khoirul Fattah",
-          prodi: "D4 Teknik Informatika",
+          prodi: "D4 Informatics Engineering",
           foto: "/Member/WM_KHOIRUL.jpg",
         },
       ],
       Gen17: [
         {
           nama: "Alfian Aditya K.",
-          prodi: "D4 Teknologi Game",
+          prodi: "D4 Game Technology",
           foto: "/Member/WM_ALFIAN.jpg",
         },
         {
           nama: "Krisna Wahyu S.",
-          prodi: "D4 Teknik Informatika",
+          prodi: "D4 Informatics Engineering",
           foto: "/Member/WM_KRISNA.jpg",
         },
         {
           nama: "Syahrul Wicaksono",
-          prodi: "D4 Telekomunikasi",
+          prodi: "D4 Telecommunications Engineering",
           foto: "/Member/WM_SYAHRUL.jpg",
         },
         {
-          nama: "Kurniawan Tri Yudha",
-          prodi: "D4 Telekomunikasi",
+          nama: "Kurniawan Try Yudha",
+          prodi: "D3 Telecommunications Engineering",
           foto: "/Member/WM_YUDHA.jpg",
         },
       ],
@@ -365,7 +365,7 @@ const LandingPage = () => {
             />
             <p className="mb-4 text-center text-xs md:text-lg md:px-20 md:pt-5 lg:text-2xl lg:px-28  font-montserrat text-black">
               ENT is a Journalism and Networking Team hosted by the Computer
-              Network and Information Systems Unit of Politeknik Elektronika
+              Network and Information Systems Unit of PoliElectrical Engineering
               Negeri Surabaya (PENS).
             </p>
           </div>
