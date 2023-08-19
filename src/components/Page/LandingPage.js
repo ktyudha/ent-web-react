@@ -376,12 +376,12 @@ const LandingPage = () => {
           <img
             src={process.env.PUBLIC_URL + "iconalldiv.png"}
             alt="Logo Divisi UKM XYZ"
-            className="mx-auto mb-4 w-full md:p-10 lg:p-20 "
+            className="mx-auto w-full md:p-10 lg:p-20 "
           />
         </section>
 
         {/* Section 4: Tombol Icon Kesamping */}
-        <section className="pt-10 px-4 text-center">
+        <section className="bg-white pt-10 px-4 text-center">
           <div className="flex justify-center">
             {IconData.map((item, index) => (
               <div
@@ -393,32 +393,32 @@ const LandingPage = () => {
                 } rounded-full flex items-center justify-center mx-4`}
                 onClick={() => handleIconClick(index)}
               >
-                <img src={item.icon} alt={item.label} className="w-28 h-w-28" />
+                <img src={item.icon} alt={item.label} className="w-28 h-w-28 xl:w-44 xl:h-w-44" />
               </div>
             ))}
           </div>
         </section>
 
         {/* Section 5: Deskripsi Divisi */}
-        <section className="px-10 lg:px-16 text-center">
+        <section className="bg-white px-10 lg:px-16 text-center">
           <div className="flex flex-col items-center">
             <div className="flex pt-8 pb-8">
               {["/Cha/CFG.svg", "/Cha/CDG.svg"].includes(
                 IconData[selectedIcon]?.icon2
               ) ? (
                 <>
-                  <div className="w-2/5 ">
+                  <div className="w-2/5 flex justify-center xl:justify-end">
                     <img
                       src={IconData[selectedIcon]?.icon2 || ""}
                       alt={IconData[selectedIcon]?.label || ""}
-                      className="w-full h-w-full md:w-4/5 md:h-w-4/5 flex justify-center"
+                      className="w-full h-w-full md:w-4/5 md:h-w-4/5 xl:w-3/5 xl:h-w-3/5 "
                     />
                   </div>
-                  <div className="w-3/5 mt-7 text-left pl-4">
+                  <div className="w-3/5 mt-7 text-left">
                     <p className="text-2xl  md:text-4xl lg:text-6xl font-GothamBlack font-black text-sky-900 mb-2">
                       {IconData[selectedIcon]?.label || ""}
                     </p>
-                    <p className="text-xs md:text-lg lg:text-2xl lg:mr-10 text-gray-500 mb-4">
+                    <p className="text-xs md:text-lg lg:text-2xl lg:mr-10 xl:mr-28 text-gray-500 mb-4">
                       {IconData[selectedIcon]?.description || ""}
                     </p>
                   </div>
@@ -429,15 +429,15 @@ const LandingPage = () => {
                     <p className="text-2xl md:text-4xl lg:text-6xl font-GothamBlack font-black text-sky-900 mb-2">
                       {IconData[selectedIcon]?.label || ""}
                     </p>
-                    <p className="text-xs md:text-lg lg:text-2xl lg:ml-10 text-gray-500 mb-4">
+                    <p className="text-xs md:text-lg lg:text-2xl lg:ml-10 xl:ml-28 text-gray-500 mb-4">
                       {IconData[selectedIcon]?.description || ""}
                     </p>
                   </div>
-                  <div className="w-2/5">
+                  <div className="w-2/5 flex justify-center xl:justify-start">
                     <img
                       src={IconData[selectedIcon]?.icon2 || ""}
                       alt={IconData[selectedIcon]?.label || ""}
-                      className="w-full h-w-full md:w-4/5 md:h-w-4/5 flex justify-center"
+                      className="w-full h-w-full md:w-4/5 md:h-w-4/5 xl:w-3/5 xl:h-w-3/5"
                     />
                   </div>
                 </>
