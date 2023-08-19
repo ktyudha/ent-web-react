@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axiosInstance from "../../../utils/axiosInstance";
+import { useNavigate } from "react-router-dom";
 
 import FormLayout from "../../../layouts/FormLayout";
 import backgroundImage from "../../../asset/pattern3.png";
 
 const ResponsiveFormWithNavbar = () => {
+  const navigate = useNavigate();
   const requiredFields = [
     "name",
     "placeOfBirth",
@@ -53,9 +55,9 @@ const ResponsiveFormWithNavbar = () => {
     e.preventDefault();
 
     try {
-      const response = await axiosInstance.post("/recruitment", formData, {});
-      console.log("Response:", response);
-      // You can handle the response data here
+      await axiosInstance.post("/recruitment", formData, {});
+
+      navigate("/participant");
     } catch (error) {
       console.error("Error:", error);
     }
@@ -242,6 +244,7 @@ const ResponsiveFormWithNavbar = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
+                    maxLength={19}
                     type="text"
                     placeholder="Enter your name..."
                   />
@@ -319,6 +322,7 @@ const ResponsiveFormWithNavbar = () => {
                     value={formData.boarding_address}
                     onChange={handleInputChange}
                     rows="3"
+                    maxLength={42}
                     placeholder="Enter your boarding address..."
                   />
                 </div>
@@ -338,6 +342,7 @@ const ResponsiveFormWithNavbar = () => {
                     value={formData.home_address}
                     onChange={handleInputChange}
                     rows="3"
+                    maxLength={42}
                     placeholder="Enter your home address..."
                   />
                 </div>
@@ -379,6 +384,8 @@ const ResponsiveFormWithNavbar = () => {
                     value={formData.nrp}
                     onChange={handleInputChange}
                     type="number"
+                    minLength={10}
+                    maxLength={10}
                     placeholder="Enter your NRP..."
                   />
                 </div>
@@ -490,7 +497,7 @@ const ResponsiveFormWithNavbar = () => {
                     className="block text-sm font-bold mb-2"
                     htmlFor="email"
                   >
-                    Email
+                    Email PENS
                   </label>
                   <input
                     autoComplete="off"
@@ -602,6 +609,7 @@ const ResponsiveFormWithNavbar = () => {
                     name="motto"
                     rows="3"
                     value={formData.motto}
+                    maxLength={45}
                     onChange={handleInputChange}
                     placeholder="Enter your motto..."
                   />
@@ -620,6 +628,7 @@ const ResponsiveFormWithNavbar = () => {
                     name="interest"
                     rows="3"
                     value={formData.interest}
+                    maxLength={45}
                     onChange={handleInputChange}
                     placeholder="Enter your interests..."
                   />
@@ -660,6 +669,7 @@ const ResponsiveFormWithNavbar = () => {
                     name="reason"
                     rows="3"
                     value={formData.reason}
+                    maxLength={45}
                     onChange={handleInputChange}
                     placeholder="Enter your reason..."
                   />
@@ -813,6 +823,7 @@ const ResponsiveFormWithNavbar = () => {
                           type="text"
                           className="border text-gray-400  w-full rounded px-2 py-1"
                           placeholder="Organization"
+                          maxLength={30}
                           value={experience.organization_name}
                           onChange={(e) =>
                             handleExperienceChange(
@@ -835,6 +846,7 @@ const ResponsiveFormWithNavbar = () => {
                           className="border text-gray-400 w-full rounded px-2 py-1"
                           placeholder="Position"
                           value={experience.position}
+                          maxLength={30}
                           onChange={(e) =>
                             handleExperienceChange(
                               index,
@@ -938,6 +950,7 @@ const ResponsiveFormWithNavbar = () => {
                           type="text"
                           className="border w-full text-gray-400 rounded px-2 py-1"
                           placeholder="Title"
+                          maxLength={30}
                           value={achievement.title}
                           onChange={(e) =>
                             handleAchievementChange(
@@ -988,6 +1001,7 @@ const ResponsiveFormWithNavbar = () => {
                           type="text"
                           className="border w-full text-gray-400 rounded px-2 py-1"
                           placeholder="Achievement"
+                          maxLength={12}
                           value={achievement.achievement}
                           onChange={(e) =>
                             handleAchievementChange(

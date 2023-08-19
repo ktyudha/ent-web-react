@@ -22,6 +22,13 @@ const styles = StyleSheet.create({
     marginTop: 200,
     marginBottom: 10,
   },
+  sectionAchiv: {
+    marginTop: 30,
+    marginBottom: 10,
+  },
+  sectionLast: {
+    marginTop: 10,
+  },
   heading: {
     fontSize: 18,
     fontWeight: "bold",
@@ -62,7 +69,7 @@ const styles = StyleSheet.create({
   },
   textforSubFirstPerson: {
     marginLeft: 235,
-    marginTop: 83,
+    marginTop: 43.5,
     fontSize: "12px",
     textTransform: "capitalize",
   },
@@ -100,14 +107,14 @@ const styles = StyleSheet.create({
   },
   textforSubExp: {
     fontFamily: "Times-Italic",
-    marginLeft: 235,
+    marginLeft: 300,
     marginTop: 3,
     fontSize: "12px",
     textTransform: "capitalize",
   },
   textforSubExpTitle: {
-    marginLeft: 235,
-    marginTop: -12.2,
+    marginLeft: 300,
+    marginTop: -12.5,
     fontSize: "12px",
     textTransform: "capitalize",
   },
@@ -119,14 +126,22 @@ const styles = StyleSheet.create({
     textTransform: "capitalize",
   },
   textforDate: {
-    marginTop: 248.7,
-    marginLeft: 455,
+    fontFamily: "Helvetica-Bold",
+    marginTop: 60,
+    marginLeft: 390,
+    fontSize: "12px",
+    textTransform: "capitalize",
+  },
+  textforSign: {
+    marginTop: 5,
+    marginLeft: 390,
     fontSize: "12px",
     textTransform: "capitalize",
   },
   textforNameTtd: {
-    marginTop: 88,
-    marginLeft: 397,
+    fontFamily: "Helvetica-Bold",
+    marginTop: 60,
+    marginLeft: 390,
     fontSize: "12px",
     textTransform: "uppercase",
   },
@@ -148,20 +163,22 @@ const PDFTemplate = ({ dataCetak }) => {
   // const experiences = dataCetak.experience;
   console.log(dataCetak.experience);
   console.log(dataCetak.achievement);
-  const formattedDate = new Date(dataCetak.created_at).toLocaleDateString(
-    "id-ID",
-    {
+  function formatDate(date) {
+    const formattedDate = new Date(date).toLocaleDateString("id-ID", {
       day: "numeric",
       year: "numeric",
       month: "long",
-      // hour: "numeric",
-      // minute: "numeric",
-      // second: "numeric",
-      // timeZoneName: "short",
-    }
-  );
+    });
+    return formattedDate;
+  }
+  function formatDateYear(date) {
+    const formattedDate = new Date(date).toLocaleDateString("id-ID", {
+      year: "numeric",
+      month: "long",
+    });
+    return formattedDate;
+  }
 
-  console.log(formattedDate);
   return (
     <Document>
       <Page size="A4">
@@ -170,7 +187,7 @@ const PDFTemplate = ({ dataCetak }) => {
           <Text style={styles.textforStrata}>{dataCetak.prodi}</Text>
           <Text style={styles.textforNrp}>{dataCetak.nrp}</Text>p{/* BIODATA */}
           <Text style={styles.textforSubFirst}>
-            {dataCetak.place_of_birth}, {dataCetak.date_of_birth}
+            {dataCetak.place_of_birth}, {formatDate(dataCetak.date_of_birth)}
           </Text>
           <Text style={styles.textforSub}>{dataCetak.gender}</Text>
           <Text style={styles.textforSub}>{dataCetak.religion}</Text>
@@ -179,7 +196,9 @@ const PDFTemplate = ({ dataCetak }) => {
           <Text style={styles.textforSub}>{dataCetak.email}</Text>
           <Text style={styles.textforSub}>{dataCetak.phone}</Text>
           <Text style={styles.textforSub}>{dataCetak.mbti}</Text>
-          {/* PERCONALITY */}
+        </View>
+        {/* PERCONALITY */}
+        <View style={styles.sectionAchiv}>
           <Text style={styles.textforSubFirstPerson}>{dataCetak.motto}</Text>
           <Text style={styles.textforSubPersonality}>{dataCetak.interest}</Text>
           <Text style={styles.textforSubPersonality}>{dataCetak.reason}</Text>
@@ -190,10 +209,10 @@ const PDFTemplate = ({ dataCetak }) => {
         </View>
       </Page>
       <Page size="A4">
-        <View style={styles.section}>
+        <View>
           {dataCetak.experience && Array.isArray(dataCetak.experience) ? (
             dataCetak.experience.map((exp, expIndex) => (
-              <View>
+              <View style={expIndex === 0 ? styles.section : ""}>
                 <Text
                   key={expIndex}
                   style={
@@ -202,35 +221,14 @@ const PDFTemplate = ({ dataCetak }) => {
                       : styles.textforOtherAchiv
                   }
                 >
-                  {exp.start_date} - {exp.end_date}
+                  {formatDateYear(exp.start_date)} -{" "}
+                  {formatDateYear(exp.end_date)}
                 </Text>
                 <Text style={styles.textforSubExpTitle}>
                   {exp.organization_name}
                 </Text>
                 <Text key={expIndex} style={styles.textforSubExp}>
                   {exp.position}
-                </Text>
-              </View>
-            ))
-          ) : (
-            <Text>No experience data available</Text>
-          )}
-          {dataCetak.achievement && Array.isArray(dataCetak.achievement) ? (
-            dataCetak.achievement.map((acv, acvIndex) => (
-              <View>
-                <Text
-                  key={acvIndex}
-                  style={
-                    acvIndex === 0
-                      ? styles.textforDateAchiv
-                      : styles.textforOtherAchiv
-                  }
-                >
-                  {acv.date}
-                </Text>
-                <Text style={styles.textforSubExpTitle}>{acv.title}</Text>
-                <Text key={acvIndex} style={styles.textforSubExp}>
-                  {acv.achievement}, {acv.level}
                 </Text>
               </View>
             ))
@@ -244,12 +242,44 @@ const PDFTemplate = ({ dataCetak }) => {
       </Page>
       <Page size="A4">
         <View>
-          <Text style={styles.textforDesc}>{dataCetak.description}</Text>
-          <Text style={styles.textforDate}>{formattedDate}</Text>
-          <Text style={styles.textforNameTtd}>{dataCetak.name}</Text>
+          {dataCetak.achievement && Array.isArray(dataCetak.achievement) ? (
+            dataCetak.achievement.map((acv, acvIndex) => (
+              <View style={acvIndex === 0 ? styles.section : ""}>
+                <Text
+                  key={acvIndex}
+                  style={
+                    acvIndex === 0
+                      ? styles.textforSubFirstExp
+                      : styles.textforOtherAchiv
+                  }
+                >
+                  {formatDate(acv.date)}
+                </Text>
+                <Text style={styles.textforSubExpTitle}>{acv.title}</Text>
+                <Text key={acvIndex} style={styles.textforSubExp}>
+                  {acv.achievement}, {acv.level}
+                </Text>
+              </View>
+            ))
+          ) : (
+            <Text>No experience data available</Text>
+          )}
         </View>
         <View style={styles.backgroundImage}>
           <Image src={process.env.PUBLIC_URL + "/template3.png"} />
+        </View>
+      </Page>
+      <Page size="A4">
+        <Text style={styles.textforDesc}>{dataCetak.description}</Text>
+        <View style={styles.sectionLast}>
+          <Text style={styles.textforDate}>
+            Surabaya, {formatDate(dataCetak.created_at)}
+          </Text>
+          <Text style={styles.textforSign}>Signature</Text>
+          <Text style={styles.textforNameTtd}>{dataCetak.name}</Text>
+        </View>
+        <View style={styles.backgroundImage}>
+          <Image src={process.env.PUBLIC_URL + "/template4.png"} />
         </View>
       </Page>
     </Document>
