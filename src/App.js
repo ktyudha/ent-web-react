@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Form from "./components/Page/oprec/Form.js";
+import Form from "./components/Page/oprec/Form";
 // import Axiostesting from "./components/Page/testAxios.js";
 import LandingPage from "./components/Page/LandingPage";
-import RequirementPage from "./components/Page/oprec/RequirementPage.js";
+import RequirementPage from "./components/Page/oprec/RequirementPage";
 import SearchParticipant from "./components/Page/oprec/SearchParticipant";
-import NotfoundPage from "./components/Page/found404.js";
-import CekParticipant from "./components/Page/oprec/CekParticipant.js";
+import NotfoundPage from "./components/Page/found404";
+import CekParticipant from "./components/Page/oprec/CekParticipant";
 // import PDFTemplate from "./components/Common/PdfTemplateComp.js";
 
 function App() {
