@@ -14,13 +14,13 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/requirement" element={<RequirementPage />} />
-        <Route path="/registrasi" element={<Form />} />
+        <Route path="/registration" element={<Form />} />
         <Route path="/participant/:id" element={<SearchParticipant />} />
         <Route path="/participant" element={<CekParticipant />} />
 
         <Route path="/*" element={<NotfoundPage />} />
         <Route path="/requirement/*" element={<NotfoundPage />} />
-        <Route path="/registrasi/*" element={<NotfoundPage />} />
+        <Route path="/registration/*" element={<NotfoundPage />} />
         <Route path="/participant/*" element={<NotfoundPage />} />
         <Route path="/participant/:id/*" element={<NotfoundPage />} />
         {/* <Route path="/axios" element={<Axiostesting />} /> */}
