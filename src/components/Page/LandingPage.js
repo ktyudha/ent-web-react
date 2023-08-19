@@ -336,32 +336,27 @@ const LandingPage = () => {
           <div className="flex items-center flex-col justify-center md:pt-10 lg:pb-20">
             <Link
               to={"/registration"}
-              className="bg-teal-500 w-2/5  text-white font-bold py-2 px-4 rounded-full mt-4 md:text-xl hover:bg-gray-300 hover:text-white transition duration-300"
+              className="bg-teal-500 w-2/5 md:w-2/6  text-white font-bold py-2 px-4  rounded-full mt-4 md:text-xl hover:bg-gray-300 hover:text-white transition duration-300"
             >
               <button>Join Us</button>
             </Link>
             <Link
               to={"/requirement"}
-              className="bg-yellow-500 w-2/5  text-white font-bold py-2 px-4 rounded-full mt-4 md:text-xl hover:bg-gray-300 hover:text-white transition duration-300"
+              className="bg-yellow-500 w-2/5 md:w-2/6  text-white font-bold py-2 px-4 rounded-full mt-4 md:text-xl hover:bg-gray-300 hover:text-white transition duration-300"
             >
               <button>Requirement</button>
             </Link>
           </div>
+          
         </section>
 
-        {/* Gambar blending */}
-        <div className="bg-blend-image absolute left-0 w-full h-full z-10 lg:mtminf">
-          <img
-            src={process.env.PUBLIC_URL + "/charal.png"}
-            alt="Hero"
-            className="w-full mx-auto mb-4 md:w-2/4"
-          />
-        </div>
+        <section className="bg-white text-center">
+          <img src={process.env.PUBLIC_URL + "/hero.svg"} className="w-full" alt="Hero" />
+        </section>
 
-        <section className="h-80 lg:h-96 bg-hero"></section>
 
         {/* Section 2: Logo dan Penjelasan UKM */}
-        <section className="bg-white pb-16 px-8 pt-20 md:pt-80 lg:pt-96 text-center">
+        <section className="bg-white pb-16 px-8 text-center">
           <div className="lg:pt-32">
             <img
               src={process.env.PUBLIC_URL + "/logoent.png"}
@@ -386,7 +381,7 @@ const LandingPage = () => {
         </section>
 
         {/* Section 4: Tombol Icon Kesamping */}
-        <section className="pt-16 px-4 text-center">
+        <section className="pt-10 px-4 text-center">
           <div className="flex justify-center">
             {IconData.map((item, index) => (
               <div
@@ -405,7 +400,7 @@ const LandingPage = () => {
         </section>
 
         {/* Section 5: Deskripsi Divisi */}
-        <section className="px-4 text-center">
+        <section className="px-10 lg:px-16 text-center">
           <div className="flex flex-col items-center">
             <div className="flex pt-8 pb-8">
               {["/Cha/CFG.svg", "/Cha/CDG.svg"].includes(
@@ -423,7 +418,7 @@ const LandingPage = () => {
                     <p className="text-2xl  md:text-4xl lg:text-6xl font-GothamBlack font-black text-sky-900 mb-2">
                       {IconData[selectedIcon]?.label || ""}
                     </p>
-                    <p className="text-xs md:text-lg lg:text-2xl text-gray-500 mb-4">
+                    <p className="text-xs md:text-lg lg:text-2xl lg:mr-10 text-gray-500 mb-4">
                       {IconData[selectedIcon]?.description || ""}
                     </p>
                   </div>
@@ -434,7 +429,7 @@ const LandingPage = () => {
                     <p className="text-2xl md:text-4xl lg:text-6xl font-GothamBlack font-black text-sky-900 mb-2">
                       {IconData[selectedIcon]?.label || ""}
                     </p>
-                    <p className="text-xs md:text-lg lg:text-2xl text-gray-500 mb-4">
+                    <p className="text-xs md:text-lg lg:text-2xl lg:ml-10 text-gray-500 mb-4">
                       {IconData[selectedIcon]?.description || ""}
                     </p>
                   </div>
