@@ -2,16 +2,16 @@ import { Navbar } from "flowbite-react";
 
 export default function NavbarWithCTAButton() {
   return (
-    <Navbar container className="bg-hero  fixed w-full z-20 top-0 left-0  ">
-      <nav class="bg-hero dark:bg-gray-900 fixed w-full z-20 top-0 left-0  ">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Navbar.Brand href="/" class="flex items-center">
+    <Navbar className="bg-hero  fixed w-full z-20 top-0 left-0  ">
+      <nav className="bg-hero text-white fixed w-full z-20 top-0 left-0  ">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <Navbar.Brand href="/" className="flex items-center">
             <img
               alt="Flowbite React Logo"
               className="mr-3 h-6 sm:h-9"
               src="logo/ENT (Terang).svg"
             />
-            <span className="self-center whitespace-nowrap lg:text-xl text-xs font-semibold text-white">
+            <span className="self-center whitespace-nowrap lg:text-xl md:text-md text-xs font-semibold text-white">
               EEPIS News and Network Team
             </span>
           </Navbar.Brand>
@@ -19,20 +19,17 @@ export default function NavbarWithCTAButton() {
           <Navbar.Toggle />
 
           <Navbar.Collapse>
-            <Navbar.Link href="#" className="text-white">
-              <p>Home</p>
+            <Navbar.Link href="/" className="md:text-lg text-md">
+              <p className="text-white hover:text-yellow-700">Home</p>
             </Navbar.Link>
-            <Navbar.Link href="#" className="text-white">
-              About
+            <Navbar.Link href="/#about" className=" md:text-lg text-md">
+              <p className="text-white hover:text-yellow-700">About</p>
             </Navbar.Link>
-            <Navbar.Link href="#" className="text-white">
-              Services
+            <Navbar.Link href="/#division" className="md:text-lg text-md">
+              <p className="text-white hover:text-yellow-700">Division</p>
             </Navbar.Link>
-            <Navbar.Link href="#" className="text-white">
-              Pricing
-            </Navbar.Link>
-            <Navbar.Link href="#" className="text-white">
-              Contact
+            <Navbar.Link href="/#team" className=" md:text-lg text-md">
+              <p className="text-white  hover:text-yellow-700">Team</p>
             </Navbar.Link>
           </Navbar.Collapse>
         </div>

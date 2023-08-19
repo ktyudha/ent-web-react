@@ -71,13 +71,13 @@ const RequirementPage = () => {
             backgroundRepeat: "repeat",
           }}
         >
-          <div className="my-8 w-full lg:mb-16">
+          <div className="my-12 w-full lg:mb-20">
             <h2 className="text-5xl text-center font-extrabold text-sky-900">
               REQUIREMENT DIVISION
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 lg:mx-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:mx-24">
             <div className="mx-16 hover:drop-shadow-xl  md:mx-0">
               <button onClick={() => openModal("modal1")}>
                 <img
@@ -129,7 +129,7 @@ const RequirementPage = () => {
             <Link to={"/registration"}>
               {" "}
               <Button className="text-center  lg:mt-10 my-10 mx-4 lg:mb-0 bg-sky-900">
-                Regist Now
+                Regist Now !!
               </Button>
             </Link>
             <Link to={"/participant"}>

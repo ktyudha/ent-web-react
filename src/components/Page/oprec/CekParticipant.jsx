@@ -70,7 +70,7 @@ const CekParticipant = () => {
                     className="block text-sm font-bold mb-2"
                     htmlFor="email"
                   >
-                    Email
+                    Email Pens
                   </label>
                   <input
                     autoComplete="off"
@@ -80,7 +80,7 @@ const CekParticipant = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     type="text"
-                    placeholder="Enter your name..."
+                    placeholder="Enter your email student ..."
                   />
                 </div>
                 <div className="mb-4">
@@ -95,21 +95,21 @@ const CekParticipant = () => {
                     value={formData.nrp}
                     onChange={handleInputChange}
                     type="text"
-                    placeholder="Enter your name..."
+                    placeholder="Enter your nrp ..."
                   />
                 </div>
                 <button
                   type="submit"
-                  className="px-4 py-2 mt-2 w-full bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                  className="px-4 py-2 mt-2 w-full bg-teal-500 text-white rounded-md hover:bg-blue-600"
                 >
-                  Submit
+                  <span className="font-bold">Submit</span>
                 </button>
                 <p className="mt-4">
-                  <Link to={"/registrasi"}>
-                    <span className="text-yellow-400 font-bold hover:text-slate-500">
+                  <Link to={"/registration"}>
+                    <span className="text-yellow-400 font-bold hover:text-slate-500 underline underline-offset-1">
                       Click Here
                     </span>{" "}
-                    for Regist..
+                    for Registration
                   </Link>
                 </p>
               </form>
