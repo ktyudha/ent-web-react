@@ -57,9 +57,8 @@ const CekParticipant = () => {
                   className="text-xl hover:text-teal-500 h-6 text-white "
                 />
               </Link>
-              <h2 className="text-lg font-bold mb-4 text-center">
-                {" "}
-                Cetak Formulir
+              <h2 className="md:text-2xl text-lg font-bold mb-4 text-center">
+                Generate Form
               </h2>
               <form
                 onSubmit={handleSubmit}
@@ -105,8 +104,8 @@ const CekParticipant = () => {
                   <span className="font-bold">Submit</span>
                 </button>
                 <p className="mt-4">
-                  <Link to={"/registration"}>
-                    <span className="text-yellow-400 font-bold hover:text-slate-500 underline underline-offset-1">
+                  <Link to={"/registration"} className="text-sm md:text-md">
+                    <span className="text-yellow-400 text-sm md:text-md font-bold hover:text-slate-500 underline underline-offset-1">
                       Click Here
                     </span>{" "}
                     for Registration

@@ -75,6 +75,9 @@ const RequirementPage = () => {
             <h2 className="text-5xl text-center font-extrabold text-sky-900">
               REQUIREMENT DIVISION
             </h2>
+            <p className="text-sm mt-4 text-center font-semibold md:text-xl text-yellow-700">
+              Tap for more details
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:mx-24">
@@ -129,13 +132,13 @@ const RequirementPage = () => {
             <Link to={"/registration"}>
               {" "}
               <Button className="text-center  lg:mt-10 my-10 mx-4 lg:mb-0 bg-sky-900">
-                Regist Now !!
+                Register Now !
               </Button>
             </Link>
             <Link to={"/participant"}>
               {" "}
               <Button className="text-center  lg:mt-10 my-10 mx-4 lg:mb-0 bg-teal-500">
-                Sudah daftar ?
+                Already Registered ?
               </Button>
             </Link>
           </div>
