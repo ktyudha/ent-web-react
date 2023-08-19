@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-// import FormLayout from "../../../layouts/FormLayout";
-import { Button } from "flowbite-react";
+// import FormLayout from "../../../layouts/FormLayout"
 import { Link } from "react-router-dom";
 import backgroundImage from "../../../asset/pattern3.png";
 import { useNavigate } from "react-router-dom";
 import axiosInstance from "../../../utils/axiosInstance";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const CekParticipant = () => {
   const navigate = useNavigate();
@@ -47,9 +48,15 @@ const CekParticipant = () => {
           backgroundRepeat: "repeat",
         }}
       >
-        <div className="mt-8 lg:mt-16">
+        <div className="mt-8">
           <div className="m-4 lg:m-0">
-            <div className="max-w-md md:max-w-lg mx-auto bg-sky-900 text-white shadow-md rounded px-8 pt-6 pb-8">
+            <div className="max-w-md md:max-w-lg mx-auto bg-sky-900 text-white shadow-md rounded-3xl px-6 pt-6 pb-2">
+              <Link to={"/requirement"}>
+                <FontAwesomeIcon
+                  icon={faChevronCircleLeft}
+                  className="text-xl hover:text-teal-500 h-6 text-white "
+                />
+              </Link>
               <h2 className="text-lg font-bold mb-4 text-center">
                 {" "}
                 Cetak Formulir
@@ -97,22 +104,17 @@ const CekParticipant = () => {
                 >
                   Submit
                 </button>
+                <p className="mt-4">
+                  <Link to={"/registrasi"}>
+                    <span className="text-yellow-400 font-bold hover:text-slate-500">
+                      Click Here
+                    </span>{" "}
+                    for Regist..
+                  </Link>
+                </p>
               </form>
             </div>
           </div>
-
-          <Link to={"/registrasi"}>
-            {" "}
-            <Button className="text-center mx-auto lg:mt-10 my-10 lg:mb-0 bg-sky-900">
-              Regist Now ..
-            </Button>
-          </Link>
-          <Link to={"/requirement"}>
-            {" "}
-            <Button className="text-center mx-auto lg:mt-10 my-10 lg:mb-0 bg-sky-900">
-              Requirement
-            </Button>
-          </Link>
         </div>
       </div>
     </div>

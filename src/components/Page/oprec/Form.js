@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axiosInstance from "../../../utils/axiosInstance";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import FormLayout from "../../../layouts/FormLayout";
 import backgroundImage from "../../../asset/pattern3.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const ResponsiveFormWithNavbar = () => {
   const navigate = useNavigate();
@@ -225,6 +228,12 @@ const ResponsiveFormWithNavbar = () => {
             {/* Personal Information section */}
             {currentSection === "personal" && (
               <div>
+                <Link to={"/requirement"}>
+                  <FontAwesomeIcon
+                    icon={faChevronCircleLeft}
+                    className="text-xl hover:text-teal-500 h-6 text-white "
+                  />
+                </Link>
                 <h2 className="text-lg font-bold mb-4 text-center">
                   {" "}
                   FORM PERSONAL

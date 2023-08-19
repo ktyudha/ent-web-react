@@ -125,30 +125,33 @@ const RequirementPage = () => {
             </div>
           </div>
 
-          <Link to={"/registrasi"}>
-            {" "}
-            <Button className="text-center mx-auto lg:mt-20 my-10 lg:mb-0 bg-sky-900">
-              Regist Now ..
-            </Button>
-          </Link>
-          <Link to={"/participant"}>
-            {" "}
-            <Button className="text-center mx-auto lg:mt-10 my-10 lg:mb-0 bg-sky-900">
-              Sudah daftar ?
-            </Button>
-          </Link>
+          <div className="flex justify-center">
+            <Link to={"/registration"}>
+              {" "}
+              <Button className="text-center  lg:mt-10 my-10 mx-4 lg:mb-0 bg-sky-900">
+                Regist Now
+              </Button>
+            </Link>
+            <Link to={"/participant"}>
+              {" "}
+              <Button className="text-center  lg:mt-10 my-10 mx-4 lg:mb-0 bg-teal-500">
+                Sudah daftar ?
+              </Button>
+            </Link>
+          </div>
 
           {isOpenModal1 && (
             <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-opacity-25 ">
               <div className="lg:w-3/4 w-full h-auto px-5 pt-8 bg-white rounded-xl">
                 <img src="req/DG.png" className="rounded-lg" alt="" />
-
-                <button
-                  className=" bg-sky-900 px-2 rounded-full text-white font-semibold  my-4 "
-                  onClick={() => closeModal("modal1")}
-                >
-                  Close
-                </button>
+                <div className="mx-auto text-center">
+                  <button
+                    className=" bg-sky-900  py-2 px-4 text-xl rounded-full text-white font-semibold  my-4 "
+                    onClick={() => closeModal("modal1")}
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           )}
@@ -157,12 +160,14 @@ const RequirementPage = () => {
             <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-opacity-25 ">
               <div className="lg:w-3/4 w-full h-auto px-5 pt-8 bg-white rounded-xl">
                 <img src="req/WM.png" className="rounded-lg" alt="" />
-                <button
-                  className=" bg-sky-900 px-2 rounded-full text-white font-semibold  my-4 "
-                  onClick={() => closeModal("modal2")}
-                >
-                  Close
-                </button>
+                <div className="mx-auto text-center">
+                  <button
+                    className=" bg-sky-900  py-2 px-4 text-xl rounded-full text-white font-semibold  my-4 "
+                    onClick={() => closeModal("modal2")}
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           )}
@@ -171,12 +176,14 @@ const RequirementPage = () => {
             <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-opacity-25 ">
               <div className="lg:w-3/4 w-full h-auto px-5 pt-8 bg-white rounded-xl">
                 <img src="req/RP.png" className="rounded-lg" alt="" />
-                <button
-                  className=" bg-sky-900 px-2 rounded-full text-white font-semibold  my-4 "
-                  onClick={() => closeModal("modal3")}
-                >
-                  Close
-                </button>
+                <div className="mx-auto text-center">
+                  <button
+                    className=" bg-sky-900 py-2 px-4 text-xl rounded-full text-white font-semibold  my-4 "
+                    onClick={() => closeModal("modal3")}
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           )}
@@ -185,12 +192,14 @@ const RequirementPage = () => {
             <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-opacity-25 ">
               <div className="lg:w-3/4 w-full h-auto px-5 pt-8 bg-white rounded-xl">
                 <img src="req/VG.png" className="rounded-lg" alt="" />
-                <button
-                  className=" bg-sky-900 px-2 rounded-full text-white font-semibold  my-4 "
-                  onClick={() => closeModal("modal4")}
-                >
-                  Close
-                </button>
+                <div className="mx-auto text-center">
+                  <button
+                    className=" bg-sky-900  py-2 px-4 text-xl rounded-full text-white font-semibold  my-4 "
+                    onClick={() => closeModal("modal4")}
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           )}
@@ -198,12 +207,14 @@ const RequirementPage = () => {
             <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-opacity-25 ">
               <div className="lg:w-3/4 w-full h-auto px-5 pt-8 bg-white rounded-xl">
                 <img src="req/FG.png" className="rounded-lg" alt="" />
-                <button
-                  className=" bg-sky-900 px-2 rounded-full text-white font-semibold  my-4 "
-                  onClick={() => closeModal("modal5")}
-                >
-                  Close
-                </button>
+                <div className="mx-auto text-center">
+                  <button
+                    className=" bg-sky-900 rounded-full py-2 px-4 text-xl  text-white font-semibold  my-4 "
+                    onClick={() => closeModal("modal5")}
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           )}
