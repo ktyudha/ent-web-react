@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Membuat instance Axios dengan konfigurasi default
 const axiosInstance = axios.create({
-  baseURL: `http://ent-api.test/api`, // URL dasar yang digunakan untuk setiap permintaan
+  baseURL: `https://cirt.pens.ac.id/api`, // URL dasar yang digunakan untuk setiap permintaan
   timeout: 5000, // Batas waktu permintaan dalam milidetik
   headers: {
     "Content-Type": "application/json",

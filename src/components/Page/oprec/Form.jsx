@@ -490,8 +490,8 @@ const ResponsiveFormWithNavbar = () => {
                     <option disabled className="font-medium">
                       Creative Multimedia Technology Department
                     </option>
-                    <option value="D4 Multimedia Broadcasting<">
-                      D4 Multimedia Broadcasting
+                    <option value="D3 Multimedia Broadcasting<">
+                      D3 Multimedia Broadcasting
                     </option>
                     <option value="D4 Multimedia Engineering Technology">
                       D4 Multimedia Engineering Technology

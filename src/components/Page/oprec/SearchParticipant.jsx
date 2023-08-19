@@ -14,7 +14,7 @@ const SearchParticipant = () => {
   console.log(id);
   useEffect(() => {
     axios
-      .get("http://ent-api.test/api/recruitment/" + id) // Ganti dengan URL API yang benar
+      .get("https://cirt.pens.ac.id/api/recruitment/" + id) // Ganti dengan URL API yang benar
       .then((response) => {
         const fetchedData = response.data.data; // Data yang diterima dari API
         setFormData(fetchedData);
@@ -23,7 +23,7 @@ const SearchParticipant = () => {
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div>

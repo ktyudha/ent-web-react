@@ -7,9 +7,9 @@ export default function NavbarWithCTAButton() {
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Navbar.Brand href="/" className="flex items-center">
             <img
-              alt="Flowbite React Logo"
+              alt="ENT Logo"
               className="mr-3 h-6 sm:h-9"
-              src="logo/ENT (Terang).svg"
+              src={process.env.PUBLIC_URL + "/logo/ENT (Terang).svg"}
             />
             <span className="self-center whitespace-nowrap lg:text-xl md:text-md text-xs font-semibold text-white">
               EEPIS News and Network Team
