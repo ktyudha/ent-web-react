@@ -23,6 +23,7 @@ const ResponsiveFormWithNavbar = () => {
     "motto",
     "interest",
     "reason",
+    "portofolio",
   ];
 
   const [currentSection, setCurrentSection] = useState("personal"); // 'personal', 'experience', 'achievement'
@@ -58,7 +59,7 @@ const ResponsiveFormWithNavbar = () => {
     e.preventDefault();
 
     try {
-      await axiosInstance.post("/recruitment", formData, {});
+      await axiosInstance.post("/recruitment", formData);
 
       navigate("/participant");
     } catch (error) {
@@ -84,7 +85,7 @@ const ResponsiveFormWithNavbar = () => {
       ...formData,
       experiences: updatedExperiences,
     });
-    console.log(formData);
+    // console.log(formData);
   };
 
   const addExperienceField = () => {
@@ -120,7 +121,7 @@ const ResponsiveFormWithNavbar = () => {
       ...formData,
       achievements: updatedAchievements,
     });
-    console.log(formData);
+    // console.log(formData);
   };
 
   const addAchievementField = () => {
@@ -168,6 +169,7 @@ const ResponsiveFormWithNavbar = () => {
       const mottoField = document.getElementById("motto");
       const interestField = document.getElementById("interest");
       const reasonField = document.getElementById("reason");
+      const portofolioField = document.getElementById("linkDrive");
       // ... and other fields
 
       if (nameField) nameField.value = formData.name;
@@ -183,6 +185,7 @@ const ResponsiveFormWithNavbar = () => {
       if (mottoField) mottoField.value = formData.motto;
       if (interestField) interestField.value = formData.interest;
       if (reasonField) reasonField.value = formData.reason;
+      if (portofolioField) portofolioField.value = formData.url_portofolio;
 
       // ... update other fields as needed
     } else if (currentSection === "experience") {
@@ -392,7 +395,7 @@ const ResponsiveFormWithNavbar = () => {
                     name="nrp"
                     value={formData.nrp}
                     onChange={handleInputChange}
-                    type="number"
+                    type="text"
                     minLength={10}
                     maxLength={10}
                     placeholder="Enter your NRP..."

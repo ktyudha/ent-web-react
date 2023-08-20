@@ -78,9 +78,32 @@ const RequirementPage = () => {
             <p className="text-sm mt-4 text-center font-semibold md:text-xl text-yellow-700">
               Tap for more details
             </p>
+            <div className="flex justify-center">
+              <Link to={"/registration"}>
+                {" "}
+                <Button className="text-center  lg:mt-10 my-10 mx-4 lg:mb-0 bg-sky-900">
+                  Register Now !
+                </Button>
+              </Link>
+              <Link to={"/participant"}>
+                {" "}
+                <Button className="text-center  lg:mt-10 my-10 mx-4 lg:mb-0 bg-teal-500">
+                  Already Registered ?
+                </Button>
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:mx-24">
+            <div className="mx-16 hover:drop-shadow-xl  md:mx-0">
+              <button onClick={() => openModal("modal1")}>
+                <img
+                  className="h-auto max-w-full rounded-lg"
+                  src="req/reqDg.jpg"
+                  alt=""
+                />
+              </button>
+            </div>
             <div className="mx-16 hover:drop-shadow-xl  md:mx-0">
               <button onClick={() => openModal("modal1")}>
                 <img
@@ -126,21 +149,6 @@ const RequirementPage = () => {
                 />
               </button>
             </div>
-          </div>
-
-          <div className="flex justify-center">
-            <Link to={"/registration"}>
-              {" "}
-              <Button className="text-center  lg:mt-10 my-10 mx-4 lg:mb-0 bg-sky-900">
-                Register Now !
-              </Button>
-            </Link>
-            <Link to={"/participant"}>
-              {" "}
-              <Button className="text-center  lg:mt-10 my-10 mx-4 lg:mb-0 bg-teal-500">
-                Already Registered ?
-              </Button>
-            </Link>
           </div>
 
           {isOpenModal1 && (

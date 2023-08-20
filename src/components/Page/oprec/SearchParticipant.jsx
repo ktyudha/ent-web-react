@@ -18,7 +18,7 @@ const SearchParticipant = () => {
       .then((response) => {
         const fetchedData = response.data.data; // Data yang diterima dari API
         setFormData(fetchedData);
-        console.log(response.data.data.id);
+        // console.log(response.data.data.id);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -36,18 +36,11 @@ const SearchParticipant = () => {
             backgroundRepeat: "repeat",
           }}
         >
-          {/* <img src="../../../asset/pattern3.png" /> */}
           <div className="lg:mx-10 mx-0 md:py-28 py-16">
             <PDFViewer className="w-full h-screen">
               <PDFTemplate dataCetak={formData} />
             </PDFViewer>
           </div>
-          {/* <br />
-      <br />
-      <br />
-      <br /> */}
-          {/* <span className="text-lg mx-auto">Ini RequirementPage</span> */}
-          {/* </div> */}
         </div>
       </FormLayout>
     </div>
