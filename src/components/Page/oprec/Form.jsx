@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import axiosInstance from "../../../utils/axiosInstance";
+// import axiosInstance from "../../../utils/axiosInstance";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -23,7 +24,6 @@ const ResponsiveFormWithNavbar = () => {
     "motto",
     "interest",
     "reason",
-    "portofolio",
   ];
 
   const [currentSection, setCurrentSection] = useState("personal"); // 'personal', 'experience', 'achievement'
@@ -59,7 +59,8 @@ const ResponsiveFormWithNavbar = () => {
     e.preventDefault();
 
     try {
-      await axiosInstance.post("/recruitment", formData);
+      console.log(formData);
+      await axios.post("https://ent.pens.ac.id/api/api/recruitment", formData);
 
       navigate("/participant");
     } catch (error) {
@@ -169,7 +170,7 @@ const ResponsiveFormWithNavbar = () => {
       const mottoField = document.getElementById("motto");
       const interestField = document.getElementById("interest");
       const reasonField = document.getElementById("reason");
-      const portofolioField = document.getElementById("linkDrive");
+
       // ... and other fields
 
       if (nameField) nameField.value = formData.name;
@@ -185,7 +186,6 @@ const ResponsiveFormWithNavbar = () => {
       if (mottoField) mottoField.value = formData.motto;
       if (interestField) interestField.value = formData.interest;
       if (reasonField) reasonField.value = formData.reason;
-      if (portofolioField) portofolioField.value = formData.url_portofolio;
 
       // ... update other fields as needed
     } else if (currentSection === "experience") {
@@ -1067,6 +1067,7 @@ const ResponsiveFormWithNavbar = () => {
                     name="url_portofolio"
                     type="text"
                     value={formData.url_portofolio}
+                    required
                     onChange={handleInputChange}
                     placeholder="Enter your link drive..."
                   />
