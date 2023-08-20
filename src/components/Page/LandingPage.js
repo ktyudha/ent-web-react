@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import FormLayout from "../../layouts/FormLayout";
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const LandingPage = () => {
   // const image = process.env.PUBLIC_URL;
@@ -314,6 +316,8 @@ const LandingPage = () => {
   ];
   console.log(IconData);
 
+  const [showFloatingButton, setShowFloatingButton] = useState(false);
+
   const [selectedIcon, setSelectedIcon] = React.useState(0);
   // const [selectedIcon, setSelectedIcon] = useState(null);
   // const [selectedMembers, setSelectedMembers] = useState([]);
@@ -323,10 +327,27 @@ const LandingPage = () => {
     // setSelectedMembers(memberData[IconData[index].label]);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const threshold = 100; // Jarak scroll sebelum tombol muncul
+      if (window.scrollY > threshold) {
+        setShowFloatingButton(true);
+      } else {
+        setShowFloatingButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="bg-hero">
       <FormLayout>
-        <section className="bg-hero text-center flex flex-col py-10 xl:pb-0 px-12  md:pt-20 relative">
+        <section id="about" className="bg-hero text-center flex flex-col py-10 xl:pb-0 px-12  md:pt-20 relative">
           <p className="text-3xl md:text-6xl lg:text-7xl lg:px-20 xl:px-0 font-GothamBlack font-extrabold font-p text-white mb-4 pt-20">
             EEPIS NEWS AND NETWORK TEAM
           </p>
@@ -335,16 +356,10 @@ const LandingPage = () => {
           </p>
           <div className="flex items-center flex-col justify-center md:pt-10 lg:pb-20">
             <Link
-              to={"/registration"}
+              to={"/requirement"}
               className="bg-teal-500 w-2/5 md:w-2/6  text-white font-bold py-2 px-4  rounded-full mt-4 md:text-xl xl:w-1/6 hover:bg-gray-300 hover:text-white transition duration-300"
             >
-              <button>Join Us</button>
-            </Link>
-            <Link
-              to={"/requirement"}
-              className="bg-yellow-500 w-2/5 md:w-2/6  text-white font-bold py-2 px-4 rounded-full mt-4 md:text-xl xl:w-1/6 hover:bg-gray-300 hover:text-white transition duration-300"
-            >
-              <button>Requirement</button>
+              <button>Register</button>
             </Link>
           </div>
           
@@ -372,7 +387,7 @@ const LandingPage = () => {
         </section>
 
         {/* Section 3: Foto Divisi UKM */}
-        <section className="bg-white  px-8 text-center">
+        <section id="division" className="bg-white  px-8 text-center">
           <img
             src={process.env.PUBLIC_URL + "iconalldiv.png"}
             alt="Logo Divisi UKM XYZ"
@@ -447,7 +462,7 @@ const LandingPage = () => {
         </section>
 
         {/* Section 6: Daftar Member */}
-        <section className="bg-white pb-8 px-10 md:px-14 text-center">
+        <section id="team" className="bg-white pb-8 px-10 md:px-14 text-center">
           <div className="flex flex-col items-center">
             <div className="flex flex-col items-center ">
               <div className="mb-10 py-2 px-3 bg-teal-500 rounded-lg text-white">
@@ -595,6 +610,21 @@ const LandingPage = () => {
           </div>
         </section>
       </FormLayout>
+      {showFloatingButton && (
+        <button
+          id="floatingButton"
+          className="fixed bottom-4 right-4 bg-teal-500 text-white px-3 py-2 rounded-full shadow-md"
+        >
+          <a
+            href="https://api.whatsapp.com/send?phone=6285848250548" // Replace with your WhatsApp number
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={faWhatsapp} />
+          </a>
+        </button>
+      )}
+
     </div>
   );
 };

@@ -48,6 +48,20 @@
   height: 30rem;
 }
 
+#floatingButton {
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#floatingButton.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#floatingButton.hide {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
 /* .App {
   text-align: center;
 }
