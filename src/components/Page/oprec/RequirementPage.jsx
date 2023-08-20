@@ -96,13 +96,17 @@ const RequirementPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:mx-24">
             <div className="mx-16 hover:drop-shadow-xl  md:mx-0">
-              <button onClick={() => openModal("modal1")}>
+              <a
+                href="https://drive.google.com/drive/folders/1lYQQUINZvBpZKXBtEuyftUDNR28QygiC?usp=drive_link"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   className="h-auto max-w-full rounded-lg"
-                  src="req/reqDg.jpg"
+                  src="req/twibbon.png"
                   alt=""
                 />
-              </button>
+              </a>
             </div>
             <div className="mx-16 hover:drop-shadow-xl  md:mx-0">
               <button onClick={() => openModal("modal1")}>

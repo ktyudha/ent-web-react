@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import FormLayout from "../../layouts/FormLayout";
-import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const LandingPage = () => {
   // const image = process.env.PUBLIC_URL;
@@ -337,17 +337,20 @@ const LandingPage = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <div className="bg-hero">
       <FormLayout>
-        <section id="about" className="bg-hero text-center flex flex-col py-10 xl:pb-0 px-12  md:pt-20 relative">
+        <section
+          id="about"
+          className="bg-hero text-center flex flex-col py-10 xl:pb-0 px-12  md:pt-20 relative"
+        >
           <p className="text-3xl md:text-6xl lg:text-7xl lg:px-20 xl:px-0 font-GothamBlack font-extrabold font-p text-white mb-4 pt-20">
             EEPIS NEWS AND NETWORK TEAM
           </p>
@@ -362,13 +365,15 @@ const LandingPage = () => {
               <button>Register</button>
             </Link>
           </div>
-          
         </section>
 
         <section className="bg-hero text-center">
-          <img src={process.env.PUBLIC_URL + "/hero.svg"} className="w-full" alt="Hero" />
+          <img
+            src={process.env.PUBLIC_URL + "/hero.svg"}
+            className="w-full"
+            alt="Hero"
+          />
         </section>
-
 
         {/* Section 2: Logo dan Penjelasan UKM */}
         <section className="bg-white pb-16 px-8 text-center">
@@ -408,7 +413,11 @@ const LandingPage = () => {
                 } rounded-full flex items-center justify-center mx-4`}
                 onClick={() => handleIconClick(index)}
               >
-                <img src={item.icon} alt={item.label} className="w-28 h-w-28 xl:w-44 xl:h-w-44" />
+                <img
+                  src={item.icon}
+                  alt={item.label}
+                  className="w-28 h-w-28 xl:w-44 xl:h-w-44"
+                />
               </div>
             ))}
           </div>
@@ -624,7 +633,6 @@ const LandingPage = () => {
           </a>
         </button>
       )}
-
     </div>
   );
 };

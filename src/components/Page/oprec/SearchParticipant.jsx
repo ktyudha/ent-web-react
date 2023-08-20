@@ -14,7 +14,7 @@ const SearchParticipant = () => {
   console.log(id);
   useEffect(() => {
     axios
-      .get("https://cirt.pens.ac.id/api/recruitment/" + id) // Ganti dengan URL API yang benar
+      .get("https://ent.pens.ac.id/api/api/recruitment/" + id) // Ganti dengan URL API yang benar
       .then((response) => {
         const fetchedData = response.data.data; // Data yang diterima dari API
         setFormData(fetchedData);
