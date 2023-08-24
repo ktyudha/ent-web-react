@@ -157,7 +157,7 @@ const LandingPage = () => {
       Gen15: [
         {
           nama: "Fariz Bagaskoro M.",
-          prodi: "D4 Teknik Telecommunications Engineering",
+          prodi: "D4 Telecommunications Engineering",
           foto: "/Member/VG_FARIZ.jpg",
         },
       ],
@@ -258,7 +258,7 @@ const LandingPage = () => {
       Gen15: [
         {
           nama: "Cahyo Arissabarno.",
-          prodi: "D4 Teknik Komputer",
+          prodi: "D4 Computer Engineering",
           foto: "/Member/WM_CAHYO.jpg",
         },
         {
@@ -280,7 +280,7 @@ const LandingPage = () => {
         },
         {
           nama: "Nabulatulhawa",
-          prodi: "D3 Teknik Informasi",
+          prodi: "D3 Informatics Engineering",
           foto: "/Member/WM_HAWA.jpg",
         },
         {
@@ -314,7 +314,7 @@ const LandingPage = () => {
     },
     // ... other icon data
   ];
-  console.log(IconData);
+  // console.log(IconData);
 
   const [showFloatingButton, setShowFloatingButton] = useState(false);
 

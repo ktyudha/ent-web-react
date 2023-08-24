@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import axiosInstance from "../../../utils/axiosInstance";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import FormLayout from "../../../layouts/FormLayout";
@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const ResponsiveFormWithNavbar = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const requiredFields = [
     "name",
     "placeOfBirth",
@@ -55,14 +55,15 @@ const ResponsiveFormWithNavbar = () => {
   });
 
   // PERSONAL
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       console.log(formData);
-      await axios.post("https://ent.pens.ac.id/api/api/recruitment", formData);
 
-      navigate("/participant");
+      await axios.post("/recruitment", formData);
+      // navigate("/participant");
     } catch (error) {
       console.error("Error:", error);
     }
@@ -256,7 +257,6 @@ const ResponsiveFormWithNavbar = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    maxLength={19}
                     type="text"
                     placeholder="Enter your name..."
                   />
@@ -493,7 +493,7 @@ const ResponsiveFormWithNavbar = () => {
                     <option disabled className="font-medium">
                       Creative Multimedia Technology Department
                     </option>
-                    <option value="D3 Multimedia Broadcasting<">
+                    <option value="D3 Multimedia Broadcasting">
                       D3 Multimedia Broadcasting
                     </option>
                     <option value="D4 Multimedia Engineering Technology">
@@ -681,7 +681,6 @@ const ResponsiveFormWithNavbar = () => {
                     name="reason"
                     rows="3"
                     value={formData.reason}
-                    maxLength={45}
                     onChange={handleInputChange}
                     placeholder="Enter your reason..."
                   />

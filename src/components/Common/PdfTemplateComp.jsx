@@ -13,8 +13,8 @@ import {
 const styles = StyleSheet.create({
   page: {
     fontFamily: "Helvetica",
-    padding: 20,
-    // display: "flex",
+    margin: 20,
+    display: "flex",
     // alignItems: "center", // Center items horizontally
     // justifyContent: "center", // Center items vertically
   },
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
   textforSubFirst: {
     marginLeft: 235,
     marginTop: 85,
-    fontSize: "12px",
+    fontSize: "10px",
     textTransform: "capitalize",
   },
   textforSubFirstPerson: {
@@ -159,10 +159,10 @@ const styles = StyleSheet.create({
 });
 
 const PDFTemplate = ({ dataCetak }) => {
-  console.log(dataCetak);
+  // console.log(dataCetak);
   // const experiences = dataCetak.experience;
-  console.log(dataCetak.experience);
-  console.log(dataCetak.achievement);
+  // console.log(dataCetak.experience);
+  // console.log(dataCetak.achievement);
   function formatDate(date) {
     const formattedDate = new Date(date).toLocaleDateString("id-ID", {
       day: "numeric",

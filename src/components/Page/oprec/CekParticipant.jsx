@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import backgroundImage from "../../../asset/pattern3.png";
 import { useNavigate } from "react-router-dom";
-import axiosInstance from "../../../utils/axiosInstance";
+// import axiosInstance from "../../../utils/axiosInstance";
+import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,12 +23,11 @@ const CekParticipant = () => {
     e.preventDefault();
 
     try {
-      const response = await axiosInstance.post(
-        "/cekrecruitment",
-        formData,
-        {}
+      const response = await axios.post(
+        "https://cirt.pens.ac.id/api/api/cekrecruitment",
+        formData
       );
-      console.log("Response:", response.data.id);
+      // console.log("Response:", response.data.id);
       if (response.status === 200) {
         navigate("/participant/" + response.data.id);
       }
