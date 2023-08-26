@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import axiosInstance from "../../../utils/axiosInstance";
 import axios from "axios";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import FormLayout from "../../../layouts/FormLayout";
@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 const ResponsiveFormWithNavbar = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const requiredFields = [
     "name",
     "placeOfBirth",
@@ -61,10 +61,16 @@ const ResponsiveFormWithNavbar = () => {
 
     try {
       console.log(formData);
+      const response = await axios.post(
+        "https://cirt.pens.ac.id/api/api/recruitment",
+        formData
+      );
 
-      await axios.post("/recruitment", formData);
-      // navigate("/participant");
+      if (response.status === 200) {
+        navigate("/participant");
+      }
     } catch (error) {
+      alert("Mohon maaf data anda sudah terdaftar.");
       console.error("Error:", error);
     }
   };
@@ -808,7 +814,7 @@ const ResponsiveFormWithNavbar = () => {
                           className="block text-sm font-bold mb-2"
                           htmlFor="experience"
                         >
-                          End Date
+                          End Month
                         </label>
                         <input
                           type="month"
@@ -1006,9 +1012,27 @@ const ResponsiveFormWithNavbar = () => {
                           className="block text-sm font-bold mb-2"
                           htmlFor="achievement"
                         >
-                          Achievement Descrpition
+                          Achievement Grade
                         </label>
-                        <input
+                        <select
+                          className="border w-full text-gray-400 rounded px-2 py-1"
+                          value={achievement.achievement}
+                          onChange={(e) =>
+                            handleAchievementChange(
+                              index,
+                              "achievement",
+                              e.target.value
+                            )
+                          }
+                        >
+                          <option value="">--Option--</option>
+                          <option value="1st Winner">1st Winner</option>
+                          <option value="2nd Winner">2nd Winner</option>
+                          <option value="3rd Winner">3rd Winner</option>
+                          <option value="finalist">Finalist</option>
+                          <option value="participant">Participant</option>
+                        </select>
+                        {/* <input
                           type="text"
                           className="border w-full text-gray-400 rounded px-2 py-1"
                           placeholder="Achievement"
@@ -1021,7 +1045,7 @@ const ResponsiveFormWithNavbar = () => {
                               e.target.value
                             )
                           }
-                        />
+                        /> */}
                       </div>
                       {formData.achievements.length > 1 ? (
                         <button

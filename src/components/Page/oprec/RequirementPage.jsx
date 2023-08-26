@@ -143,13 +143,23 @@ const RequirementPage = () => {
           <div className="flex justify-center mt-4">
             <Link to={"/registration"}>
               {" "}
-              <Button className="text-center  lg:mt-10 mt-10 mx-4 lg:mb-0 bg-sky-900">
+              <Button className="text-center  lg:mt-10 mt-10 mx-2 lg:mb-0 bg-sky-900">
                 Register Now !
               </Button>
             </Link>
+            <a
+              href="https://forms.gle/9ooLs698Nr3tS9uX8"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {" "}
+              <Button className="text-center underline underline-offset-1 lg:mt-10 mt-10 mx-2 lg:mb-0 bg-yellow-700">
+                Register Now ! (alt)
+              </Button>
+            </a>
             <Link to={"/participant"}>
               {" "}
-              <Button className="text-center  lg:mt-10 mt-10 mx-4 lg:mb-0 bg-teal-500">
+              <Button className="text-center  lg:mt-10 mt-10 mx-2 lg:mb-0 bg-teal-500">
                 Already Registered ?
               </Button>
             </Link>
@@ -206,7 +216,7 @@ const RequirementPage = () => {
           {isOpenModal4 && (
             <div className="fixed inset-0 flex justify-center items-center backdrop-blur-sm bg-opacity-25 ">
               <div className="lg:w-3/4 w-full h-auto px-5 pt-8 bg-white rounded-xl">
-                <img src="req/VG.png" className="rounded-lg" alt="" />
+                <img src="req/VG.jpeg" className="rounded-lg" alt="" />
                 <div className="mx-auto text-center">
                   <button
                     className=" bg-sky-900  py-2 px-4 text-xl rounded-full text-white font-semibold  my-4 "

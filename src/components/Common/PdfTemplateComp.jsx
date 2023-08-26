@@ -80,6 +80,12 @@ const styles = StyleSheet.create({
     fontSize: "12px",
     textTransform: "capitalize",
   },
+  textforMail: {
+    marginLeft: 235,
+    marginTop: 5.2,
+    marginRight: 100,
+    fontSize: "12px",
+  },
   textforSubPersonality: {
     marginLeft: 235,
     marginTop: 21.2,
@@ -193,7 +199,7 @@ const PDFTemplate = ({ dataCetak }) => {
           <Text style={styles.textforSub}>{dataCetak.religion}</Text>
           <Text style={styles.textforSub}>{dataCetak.boarding_address}</Text>
           <Text style={styles.textforSub}>{dataCetak.home_address}</Text>
-          <Text style={styles.textforSub}>{dataCetak.email}</Text>
+          <Text style={styles.textforMail}>{dataCetak.email}</Text>
           <Text style={styles.textforSub}>{dataCetak.phone}</Text>
           <Text style={styles.textforSub}>{dataCetak.mbti}</Text>
         </View>

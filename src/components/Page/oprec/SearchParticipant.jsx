@@ -1,26 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import axiosInstance from "../../../utils/axiosInstance";
-import { PDFViewer } from "@react-pdf/renderer";
-import PDFTemplate from "../../Common/PdfTemplateComp";
+import { PDFViewer, PDFDownloadLink } from "@react-pdf/renderer";
 import { useParams } from "react-router-dom";
-import backgroundImage from "../../../asset/pattern3.png";
 
 import FormLayout from "../../../layouts/FormLayout";
+import PDFTemplate from "../../Common/PdfTemplateComp";
+import backgroundImage from "../../../asset/pattern3.png";
 
 const SearchParticipant = () => {
   const [formData, setFormData] = useState({});
   const { id } = useParams();
-  // const [nameFile, setNameFile] = useState();
-  // console.log(id);
+
   useEffect(() => {
     axios
-      .get("https://cirt.pens.ac.id/api/api/recruitment/" + id) // Ganti dengan URL API yang benar
+      .get("https://cirt.pens.ac.id/api/api/recruitment/" + id)
       .then((response) => {
-        const fetchedData = response.data.data; // Data yang diterima dari API
+        const fetchedData = response.data.data;
         setFormData(fetchedData);
-        // setNameFile(response.data.data.name);
-        // console.log(response.data.data.id);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -39,7 +35,7 @@ const SearchParticipant = () => {
           }}
         >
           <div className="lg:mx-10 mx-0 md:py-28 py-16 mt-10">
-            {/* <PDFDownloadLink
+            <PDFDownloadLink
               document={<PDFTemplate dataCetak={formData} />}
               fileName={`Resume ${formData.name}.pdf`}
             >
@@ -80,34 +76,11 @@ const SearchParticipant = () => {
                   </div>
                 )
               }
-            </PDFDownloadLink> */}
+            </PDFDownloadLink>
 
             <PDFViewer className="w-full h-screen">
               <PDFTemplate dataCetak={formData} />
             </PDFViewer>
-
-            {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:mx-24 text-white">
-              <div>
-                <p className="capitalize">{formData.name}</p>
-                <p className="capitalize">{formData.prodi}</p>
-                <p className="capitalize">{formData.nrp}</p>
-                <p className="capitalize">
-                  {formData.place_of_birth}, {formData.date_of_birth}
-                </p>
-                <p className="capitalize">{formData.gender}</p>
-                <p className="capitalize">{formData.religion}</p>
-                <p className="capitalize">{formData.boarding_address}</p>
-                <p className="capitalize">{formData.home_address}</p>
-                <p className="capitalize">{formData.email}</p>
-                <p className="capitalize">{formData.phone}</p>
-                <p className="capitalize">{formData.mbti}</p>
-                <br />
-                <p className="capitalize">{formData.motto}</p>
-                <p className="capitalize">{formData.interest}</p>
-                <p className="capitalize">{formData.reason}</p>
-                <p className="capitalize">{formData.division}</p>
-              </div>
-            </div> */}
           </div>
         </div>
       </FormLayout>
