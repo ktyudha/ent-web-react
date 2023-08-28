@@ -10,7 +10,7 @@ const DashboardLayout = ({ children }) => {
         backgroundRepeat: "repeat",
       }}
     >
-      <div className="h-screen">{children}</div>
+      <div>{children}</div>
     </div>
   );
 };

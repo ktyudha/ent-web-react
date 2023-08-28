@@ -37,7 +37,7 @@ export default function HoverState({ data }) {
               key={index}
               className="bg-white border-b dark:bg-gray-900 dark:border-gray-700"
             >
-              <td className="px-6 py-4"> {index++}</td>
+              <td className="px-6 py-4"> {index + 1}</td>
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"

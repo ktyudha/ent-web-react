@@ -10,6 +10,31 @@ const ListAll = () => {
   const [formData, setFormData] = useState([]);
   const navigate = useNavigate();
 
+  const divisions = [
+    {
+      division: "Graphic Designer",
+      title: "DG",
+    },
+
+    {
+      division: "Webmaster",
+      title: "WM",
+    },
+
+    {
+      division: "Reporter",
+      title: "RP",
+    },
+    {
+      division: "Photographer",
+      title: "FG",
+    },
+    {
+      division: "Videographer",
+      title: "VG",
+    },
+  ];
+
   const logout = () => {
     localStorage.removeItem("token");
 
@@ -25,7 +50,7 @@ const ListAll = () => {
 
   useEffect(() => {
     axios
-      .get("https://cirt.pens.ac.id/api/api/recruitment/")
+      .get("https://cirt.pens.ac.id/api/api/recruitment")
       .then((response) => {
         const fetchedData = response.data.data;
         setFormData(fetchedData);
@@ -44,6 +69,23 @@ const ListAll = () => {
         <h4 className="text-white font-bold text-lg mx-auto text-center md:text-2xl">
           OPREC ENT Gen 18
         </h4>
+
+        <div className="text-center mt-6 mx-auto">
+          <h2 className="text-white text-5xl my-2">{formData.length}</h2>
+
+          {divisions.map((item, index) => {
+            return (
+              <span key={index} className="mx-2 text-white text-sm">
+                {item.title} :{" "}
+                {
+                  formData.filter(
+                    (dataFilter) => dataFilter.division === item.division
+                  ).length
+                }
+              </span>
+            );
+          })}
+        </div>
         <div className="text-center mx-auto mt-6">
           <button
             onClick={logout}

@@ -359,7 +359,7 @@ const LandingPage = () => {
           </p>
           <div className="flex items-center flex-col justify-center md:pt-10 lg:pb-20">
             <Link
-              to={"/requirement"}
+              to={"/comingsoon"}
               className="bg-teal-500 w-2/5 md:w-2/6  text-white font-bold py-2 px-4  rounded-full mt-4 md:text-xl xl:w-1/6 hover:bg-gray-300 hover:text-white transition duration-300"
             >
               <button>Register</button>
